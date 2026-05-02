@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dualcoeff"
+version = "0.1.0"
+description = "Dual-Coefficient Framework for Physical Commodity Spillovers"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Nikita Lazarichev",  email = "nikita.lazarichev@iccda.io"},
+    {name = "Alexey Golubev"},
+    {name = "Ivan Novikov"},
+    {name = "Roman Sultimov"},
+    {name = "Aleksandr Volkov"},
+    {name = "Yury Maximov"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "numpy >= 1.23",
+    "pandas >= 1.5",
+    "scipy >= 1.10",
+    "statsmodels >= 0.13",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/yury-rd/dualcoeff"
+Paper = "https://doi.org/10.0000/jocm.dualcoeff"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dualcoeff*"]
